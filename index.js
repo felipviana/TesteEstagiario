@@ -2,8 +2,11 @@ $(document).ready(function() {
     $('form').submit(function(event) {
       event.preventDefault(); 
   
-      let isValid = true;
-  
+    $(this).find('.invalid-feedback').remove();
+    $(this).find('input').removeClass('is-invalid');
+
+    let isValid = true;
+
       $(this).find('input').each(function() {
         if ($(this).val() === '') {
           $(this).addClass('is-invalid');
