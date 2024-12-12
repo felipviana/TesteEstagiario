@@ -25,4 +25,8 @@ $(document).ready(function() {
         }, 3000);
       }
     });
+    $('.ball').click(function (e) {
+        e.target.classList.toggle('ball-move');
+        document.querySelector('body').classList.toggle('dark-mode');
+    });
   });
